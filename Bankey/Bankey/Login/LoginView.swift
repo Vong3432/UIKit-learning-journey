@@ -13,6 +13,7 @@ class LoginView: UIView {
     let usernameTextField = UITextField()
     let passwordTextField = UITextField()
     let stackView = UIStackView()
+    let dividerView = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,9 +29,13 @@ class LoginView: UIView {
 
 extension LoginView {
     func style() {
-        backgroundColor = .orange
+        backgroundColor = .secondarySystemBackground
+        layer.cornerRadius = 5
+        clipsToBounds = true
+        
         usernameTextField.placeholder = "Username"
         usernameTextField.delegate = self
+        dividerView.backgroundColor = .secondarySystemFill
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
         passwordTextField.delegate = self
@@ -44,8 +49,10 @@ extension LoginView {
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        dividerView.translatesAutoresizingMaskIntoConstraints = false
         
         stackView.addArrangedSubview(usernameTextField)
+        stackView.addArrangedSubview(dividerView)
         stackView.addArrangedSubview(passwordTextField)
         
         addSubview(stackView)
@@ -54,8 +61,10 @@ extension LoginView {
             stackView.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 1),
             stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),
             trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 1),
-            bottomAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 1)
+            bottomAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 1),
+            dividerView.heightAnchor.constraint(equalToConstant: 1)
         ])
+        
     }
 }
 
@@ -66,10 +75,7 @@ extension LoginView: UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != "" {
-            return true
-        }
-        return false
+        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
