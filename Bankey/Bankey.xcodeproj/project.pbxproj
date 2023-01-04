@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B34823B2965636B00CAAE01 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B34823A2965636B00CAAE01 /* DummyViewController.swift */; };
 		3B34823E29656C2E00CAAE01 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B34823D29656C2E00CAAE01 /* LocalState.swift */; };
 		3B348240296572C800CAAE01 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B34823F296572C800CAAE01 /* UIViewController+Utils.swift */; };
 		3B4D7282296294EA0025902E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4D7281296294EA0025902E /* AppDelegate.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B34823A2965636B00CAAE01 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		3B34823D29656C2E00CAAE01 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		3B34823F296572C800CAAE01 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		3B4D727E296294EA0025902E /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +98,6 @@
 			children = (
 				3B4D7285296294EA0025902E /* LoginViewController.swift */,
 				3B4D7297296298240025902E /* LoginView.swift */,
-				3B34823A2965636B00CAAE01 /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -187,7 +184,6 @@
 				3B348240296572C800CAAE01 /* UIViewController+Utils.swift in Sources */,
 				3B4D7298296298240025902E /* LoginView.swift in Sources */,
 				3B34823E29656C2E00CAAE01 /* LocalState.swift in Sources */,
-				3B34823B2965636B00CAAE01 /* DummyViewController.swift in Sources */,
 				3B4D7286296294EA0025902E /* LoginViewController.swift in Sources */,
 				3BDAA08E296536CD001840BF /* OnboardingViewController.swift in Sources */,
 				3B9F19E529657AB400B12F8A /* MainViewController.swift in Sources */,
