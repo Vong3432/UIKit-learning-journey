@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: AnyObject {
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
     
     let titleLabel = UILabel()
@@ -14,6 +18,8 @@ class LoginViewController: UIViewController {
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
+    
+    weak var delegate: LoginViewControllerDelegate?
     
     var username: String? {
         loginView.usernameTextField.text
@@ -118,6 +124,8 @@ extension LoginViewController {
             configureErrorMessage(message: "Username & password cannot be empty.")
             return
         }
+        
+        delegate?.didLogin()
     }
     
     private func configureErrorMessage(message: String) {
