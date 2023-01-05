@@ -99,7 +99,7 @@ extension AccountSummaryCell {
         // StackView
         NSLayoutConstraint.activate([
             billViewMoreImageView.trailingAnchor.constraint(equalToSystemSpacingAfter: billInfoStackView.trailingAnchor, multiplier: 3),
-            bottomAnchor.constraint(equalToSystemSpacingBelow: billInfoStackView.bottomAnchor, multiplier: 2)
+            billInfoStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 }
