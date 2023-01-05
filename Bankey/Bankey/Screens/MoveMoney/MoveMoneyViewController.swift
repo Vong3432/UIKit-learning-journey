@@ -11,6 +11,7 @@ import UIKit
 class MoveMoneyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Move money"
         style()
         layout()
     }

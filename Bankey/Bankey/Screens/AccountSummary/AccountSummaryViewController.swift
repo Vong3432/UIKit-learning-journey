@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 
 class AccountSummaryViewController: UIViewController {
-    let items = ["Table1", "Table2", "Table3"]
+    let items = Array.init(repeating: "Hello", count: 10000)
     
     private let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Summary"
         style()
         layout()
         setupTableHeaderView()
@@ -28,7 +29,6 @@ extension AccountSummaryViewController {
     }
     
     private func layout() {
-        view.translatesAutoresizingMaskIntoConstraints = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(tableView)
@@ -51,6 +51,9 @@ extension AccountSummaryViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
+        
+        tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseID)
+        tableView.rowHeight = CGFloat(AccountSummaryCell.rowHeight)
     }
 }
 
@@ -60,14 +63,13 @@ extension AccountSummaryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        var configuration = cell.defaultContentConfiguration()
-        configuration.text = items[indexPath.row]
-        cell.contentConfiguration = configuration
+        let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath) as! AccountSummaryCell
         return cell
     }
 }
 
 extension AccountSummaryViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
