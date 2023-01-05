@@ -30,38 +30,11 @@ extension MainViewController {
         let moveMoneyNC = UINavigationController(rootViewController: moveMoneyViewController)
         let moreViewNC = UINavigationController(rootViewController: moreViewController)
         
-        hideNavigationBarLine(summaryNC.navigationBar)
         viewControllers = [summaryNC, moveMoneyNC, moreViewNC]
-    }
-    
-    private func hideNavigationBarLine(_ navigationBar: UINavigationBar)
-    {
-        let img = UIImage()
-        navigationBar.shadowImage = img
-        navigationBar.setBackgroundImage(img, for: .default)
-        navigationBar.isTranslucent = false
     }
     
     private func setupTabBar() {
         tabBar.tintColor = .systemTeal
         tabBar.isTranslucent = false
-    }
-}
-
-class AccountSummaryViewController: UIViewController {
-    override func viewDidLoad() {
-        title = "Summary"
-    }
-}
-
-class MoveMoneyViewController: UIViewController {
-    override func viewDidLoad() {
-        title = "Move money"
-    }
-}
-
-class MoreViewController: UIViewController {
-    override func viewDidLoad() {
-        title = "More"
     }
 }

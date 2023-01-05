@@ -16,6 +16,11 @@
 		3B4D7298296298240025902E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4D7297296298240025902E /* LoginView.swift */; };
 		3B87C55129644120004A6141 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B87C55029644120004A6141 /* OnboardingContainerViewController.swift */; };
 		3B9F19E529657AB400B12F8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F19E429657AB400B12F8A /* MainViewController.swift */; };
+		3BC9F9ED296678F60001D96E /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9EC296678F60001D96E /* AccountSummaryViewController.swift */; };
+		3BC9F9F22966793E0001D96E /* MoreControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F12966793E0001D96E /* MoreControllerView.swift */; };
+		3BC9F9F42966796C0001D96E /* MoveMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F32966796C0001D96E /* MoveMoneyViewController.swift */; };
+		3BC9F9F629667F9B0001D96E /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F529667F9B0001D96E /* AccountSummaryHeaderView.swift */; };
+		3BC9F9F829667FB20001D96E /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F729667FB20001D96E /* AccountSummaryHeaderView.xib */; };
 		3BDAA08E296536CD001840BF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDAA08D296536CD001840BF /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,11 @@
 		3B4D7297296298240025902E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B87C55029644120004A6141 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		3B9F19E429657AB400B12F8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3BC9F9EC296678F60001D96E /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
+		3BC9F9F12966793E0001D96E /* MoreControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreControllerView.swift; sourceTree = "<group>"; };
+		3BC9F9F32966796C0001D96E /* MoveMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMoneyViewController.swift; sourceTree = "<group>"; };
+		3BC9F9F529667F9B0001D96E /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		3BC9F9F729667FB20001D96E /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		3BDAA08D296536CD001840BF /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +85,7 @@
 		3B4D7280296294EA0025902E /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				3BC9F9EE2966791A0001D96E /* Screens */,
 				3B34823C29656C2500CAAE01 /* Utils */,
 				3B87C54F2964410C004A6141 /* Onboarding */,
 				3B4D7296296298170025902E /* Login */,
@@ -109,6 +120,42 @@
 				3BDAA08D296536CD001840BF /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		3BC9F9EB296678E70001D96E /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				3BC9F9EC296678F60001D96E /* AccountSummaryViewController.swift */,
+				3BC9F9F529667F9B0001D96E /* AccountSummaryHeaderView.swift */,
+				3BC9F9F729667FB20001D96E /* AccountSummaryHeaderView.xib */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		3BC9F9EE2966791A0001D96E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3BC9F9F02966792D0001D96E /* More */,
+				3BC9F9EF296679280001D96E /* MoveMoney */,
+				3BC9F9EB296678E70001D96E /* AccountSummary */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3BC9F9EF296679280001D96E /* MoveMoney */ = {
+			isa = PBXGroup;
+			children = (
+				3BC9F9F32966796C0001D96E /* MoveMoneyViewController.swift */,
+			);
+			path = MoveMoney;
+			sourceTree = "<group>";
+		};
+		3BC9F9F02966792D0001D96E /* More */ = {
+			isa = PBXGroup;
+			children = (
+				3BC9F9F12966793E0001D96E /* MoreControllerView.swift */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC9F9F829667FB20001D96E /* AccountSummaryHeaderView.xib in Resources */,
 				3B4D728E296294EB0025902E /* LaunchScreen.storyboard in Resources */,
 				3B4D728B296294EB0025902E /* Assets.xcassets in Resources */,
 			);
@@ -181,14 +229,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC9F9F629667F9B0001D96E /* AccountSummaryHeaderView.swift in Sources */,
 				3B348240296572C800CAAE01 /* UIViewController+Utils.swift in Sources */,
 				3B4D7298296298240025902E /* LoginView.swift in Sources */,
 				3B34823E29656C2E00CAAE01 /* LocalState.swift in Sources */,
 				3B4D7286296294EA0025902E /* LoginViewController.swift in Sources */,
 				3BDAA08E296536CD001840BF /* OnboardingViewController.swift in Sources */,
+				3BC9F9F22966793E0001D96E /* MoreControllerView.swift in Sources */,
 				3B9F19E529657AB400B12F8A /* MainViewController.swift in Sources */,
+				3BC9F9F42966796C0001D96E /* MoveMoneyViewController.swift in Sources */,
 				3B4D7282296294EA0025902E /* AppDelegate.swift in Sources */,
 				3B87C55129644120004A6141 /* OnboardingContainerViewController.swift in Sources */,
+				3BC9F9ED296678F60001D96E /* AccountSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
