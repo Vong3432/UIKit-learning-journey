@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class AccountSummaryViewController: UIViewController {
-    let items = Array.init(repeating: "Hello", count: 10000)
     
+    var accounts = [AccountSummaryCell.ViewModel]()
     private let tableView = UITableView()
     
     override func viewDidLoad() {
@@ -20,6 +20,7 @@ class AccountSummaryViewController: UIViewController {
         layout()
         setupTableHeaderView()
         setupTableView()
+        fetchData()
     }
 }
 
@@ -59,11 +60,14 @@ extension AccountSummaryViewController {
 
 extension AccountSummaryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return accounts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard !accounts.isEmpty else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath) as! AccountSummaryCell
+        let account = accounts[indexPath.row]
+        cell.configure(with: account)
         return cell
     }
 }
@@ -71,5 +75,15 @@ extension AccountSummaryViewController: UITableViewDataSource {
 extension AccountSummaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension AccountSummaryViewController {
+    private func fetchData() {
+        let savings = AccountSummaryCell.ViewModel(accountType: .Banking, accountName: "Saving account")
+        let visa = AccountSummaryCell.ViewModel(accountType: .CreditCard, accountName: "Visa card")
+        let investment = AccountSummaryCell.ViewModel(accountType: .Investment, accountName: "Investment account")
+        
+        accounts.append(contentsOf: [savings, visa, investment])
     }
 }

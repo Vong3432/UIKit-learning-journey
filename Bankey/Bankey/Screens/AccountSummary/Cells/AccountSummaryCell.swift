@@ -9,6 +9,18 @@ import UIKit
 
 class AccountSummaryCell: UITableViewCell {
     
+    enum AccountType: String {
+        case Banking
+        case CreditCard
+        case Investment
+    }
+    
+    struct ViewModel {
+        let accountType: AccountType
+        let accountName: String
+    }
+    
+    let viewModel: ViewModel? = nil
     static let reuseID = "AccountSummaryCell"
     static let rowHeight = 100
     
@@ -50,8 +62,7 @@ extension AccountSummaryCell {
         billInfoStackView.spacing = 4
         
         billInfoTitleLabel.text = "Current bill"
-        billInfoPriceLabel.text = "$10,000"
-        billInfoPriceLabel.font = .preferredFont(forTextStyle: .title2)
+        billInfoPriceLabel.attributedText = formattedBalanceText(dollars: "10000", cents: "35")
     }
     
     private func layout() {
@@ -101,5 +112,50 @@ extension AccountSummaryCell {
             billViewMoreImageView.trailingAnchor.constraint(equalToSystemSpacingAfter: billInfoStackView.trailingAnchor, multiplier: 3),
             billInfoStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
+    }
+}
+
+// MARK: - Formatting
+extension AccountSummaryCell {
+    private func formattedBalanceText(dollars: String, cents: String) -> NSAttributedString {
+        let dollarSignAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.preferredFont(forTextStyle: .callout),
+            .baselineOffset: 8
+        ]
+        let dollarAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.preferredFont(forTextStyle: .title1)
+        ]
+        let centsAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.preferredFont(forTextStyle: .footnote),
+            .baselineOffset: 8
+        ]
+        
+        let rootString = NSMutableAttributedString(string: "$", attributes: dollarSignAttributes)
+        let dollarString = NSAttributedString(string: dollars, attributes: dollarAttributes)
+        let centString = NSAttributedString(string: cents, attributes: centsAttributes)
+        
+        rootString.append(dollarString)
+        rootString.append(centString)
+        
+        return rootString
+    }
+}
+
+extension AccountSummaryCell {
+    func configure(with vm: ViewModel) {
+        typeLabel.text = vm.accountType.rawValue
+        nameLabel.text = vm.accountName
+        
+        switch vm.accountType {
+        case .Banking:
+            underlineView.backgroundColor = .systemTeal
+            billInfoTitleLabel.text = "Current balance"
+        case .CreditCard:
+            underlineView.backgroundColor = .systemOrange
+            billInfoTitleLabel.text = "Current balance"
+        case .Investment:
+            underlineView.backgroundColor = .systemPurple
+            billInfoTitleLabel.text = "Value"
+        }
     }
 }
