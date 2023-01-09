@@ -58,17 +58,29 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func animate() {
-        let titleAnimator = UIViewPropertyAnimator(duration: 1.75, curve: .easeInOut) {
+        let duration = 1.5
+        
+        let titleConstraintAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
             self.titleLeadingConstraint?.constant = self.leadingEdgeOnScreen
             self.view.layoutIfNeeded()
         }
-        let subtitleAnimator = UIViewPropertyAnimator(duration: 1.75, curve: .easeInOut) {
+        titleConstraintAnimator.startAnimation()
+        
+        let subtitleConstraintAnimator = UIViewPropertyAnimator(duration: duration * 2, curve: .easeInOut) {
             self.subtitleLeadingConstraint?.constant = self.leadingEdgeOnScreen
             self.view.layoutIfNeeded()
         }
+        subtitleConstraintAnimator.startAnimation()
         
-        titleAnimator.startAnimation()
-        subtitleAnimator.startAnimation(afterDelay: 0.1)
+        let titleAlphaAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
+            self.titleLabel.alpha = 1
+        }
+        titleAlphaAnimator.startAnimation(afterDelay: 1)
+        
+        let subtitleAlphaAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
+            self.subtitleLabel.alpha = 1
+        }
+        subtitleAlphaAnimator.startAnimation(afterDelay: 1)
     }
 }
 
@@ -77,11 +89,13 @@ extension LoginViewController {
         titleLabel.text = "Bankey"
         titleLabel.textAlignment = .center
         titleLabel.font = .preferredFont(forTextStyle: .largeTitle)
+        titleLabel.alpha = 0
         
         subtitleLabel.text = "Lorem ipsum is placeholder text commonly used in the graphic, print."
         subtitleLabel.textAlignment = .center
         subtitleLabel.numberOfLines = 0
         subtitleLabel.font = .preferredFont(forTextStyle: .title2)
+        subtitleLabel.alpha = 0
         
         signInButton.configuration = .filled()
         signInButton.configuration?.imagePadding = 8
