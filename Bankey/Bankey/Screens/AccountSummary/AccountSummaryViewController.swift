@@ -80,9 +80,21 @@ extension AccountSummaryViewController: UITableViewDelegate {
 
 extension AccountSummaryViewController {
     private func fetchData() {
-        let savings = AccountSummaryCell.ViewModel(accountType: .Banking, accountName: "Saving account")
-        let visa = AccountSummaryCell.ViewModel(accountType: .CreditCard, accountName: "Visa card")
-        let investment = AccountSummaryCell.ViewModel(accountType: .Investment, accountName: "Investment account")
+        let savings = AccountSummaryCell.ViewModel(
+            accountType: .Banking,
+            accountName: "Saving account",
+            accountBalance: 123456.23
+        )
+        let visa = AccountSummaryCell.ViewModel(
+            accountType: .CreditCard,
+            accountName: "Credit account",
+            accountBalance: 5000.12
+        )
+        let investment = AccountSummaryCell.ViewModel(
+            accountType: .Investment,
+            accountName: "Invest account",
+            accountBalance: 60021.75
+        )
         
         accounts.append(contentsOf: [savings, visa, investment])
     }

@@ -18,6 +18,11 @@ class AccountSummaryCell: UITableViewCell {
     struct ViewModel {
         let accountType: AccountType
         let accountName: String
+        let accountBalance: Decimal
+        
+        var balanceAsAttributedString: NSAttributedString {
+            CurrencyFormatter().makeAttributedCurrency(accountBalance)
+        }
     }
     
     let viewModel: ViewModel? = nil
@@ -46,13 +51,13 @@ class AccountSummaryCell: UITableViewCell {
 
 extension AccountSummaryCell {
     private func setup() {
-        typeLabel.text = "Banking"
+        typeLabel.text = "Type label"
         typeLabel.font = .preferredFont(forTextStyle: .caption1)
         typeLabel.adjustsFontForContentSizeCategory = true
         
         underlineView.backgroundColor = .systemTeal
         
-        nameLabel.text = "No-Fee"
+        nameLabel.text = "Name label"
         nameLabel.font = .preferredFont(forTextStyle: .title3)
         nameLabel.adjustsFontForContentSizeCategory = true
         
@@ -62,7 +67,10 @@ extension AccountSummaryCell {
         billInfoStackView.spacing = 4
         
         billInfoTitleLabel.text = "Current bill"
-        billInfoPriceLabel.attributedText = formattedBalanceText(dollars: "10000", cents: "35")
+        billInfoTitleLabel.textAlignment = .right
+        
+        billInfoPriceLabel.attributedText = formattedBalanceText(dollars: "XXX", cents: "XX")
+        billInfoPriceLabel.textAlignment = .right
     }
     
     private func layout() {
@@ -145,6 +153,7 @@ extension AccountSummaryCell {
     func configure(with vm: ViewModel) {
         typeLabel.text = vm.accountType.rawValue
         nameLabel.text = vm.accountName
+        billInfoPriceLabel.attributedText = vm.balanceAsAttributedString
         
         switch vm.accountType {
         case .Banking:
