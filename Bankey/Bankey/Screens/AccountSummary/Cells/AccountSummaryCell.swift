@@ -53,13 +53,11 @@ extension AccountSummaryCell {
     private func setup() {
         typeLabel.text = "Type label"
         typeLabel.font = .preferredFont(forTextStyle: .caption1)
-        typeLabel.adjustsFontForContentSizeCategory = true
         
         underlineView.backgroundColor = .systemTeal
         
         nameLabel.text = "Name label"
-        nameLabel.font = .preferredFont(forTextStyle: .title3)
-        nameLabel.adjustsFontForContentSizeCategory = true
+        nameLabel.font = .preferredFont(forTextStyle: .body)
         
         billViewMoreImageView.image = UIImage(systemName: "chevron.right")
         
@@ -117,8 +115,9 @@ extension AccountSummaryCell {
         
         // StackView
         NSLayoutConstraint.activate([
-            billViewMoreImageView.trailingAnchor.constraint(equalToSystemSpacingAfter: billInfoStackView.trailingAnchor, multiplier: 3),
-            billInfoStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            billInfoStackView.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 4),
+            billInfoStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            trailingAnchor.constraint(equalToSystemSpacingAfter: billInfoStackView.trailingAnchor, multiplier: 4)
         ])
     }
 }
