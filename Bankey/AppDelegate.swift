@@ -24,15 +24,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         loginViewController.delegate = self
         onboardingViewController.delegate = self
+        registerForNotifications()
         
         if hasOnboarded {
             mainViewController.setStatusBar()
+//            window?.rootViewController = loginViewController
             window?.rootViewController = mainViewController
         } else {
             window?.rootViewController = onboardingViewController
         }
         
         return true
+    }
+}
+
+extension AppDelegate {
+    private func registerForNotifications() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didLogout),
+            name: .logout,
+            object: nil
+        )
+    }
+}
+
+extension AppDelegate: LogoutDelegate {
+    @objc func didLogout() {
+        debugPrint("✅ - Did logout")
+        setRootViewController(loginViewController)
     }
 }
 

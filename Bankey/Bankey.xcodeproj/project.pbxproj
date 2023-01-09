@@ -25,6 +25,7 @@
 		3BDAA08E296536CD001840BF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDAA08D296536CD001840BF /* OnboardingViewController.swift */; };
 		3BE5D738296BBDB700BCDB26 /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5D737296BBDB700BCDB26 /* Decimal+Utils.swift */; };
 		3BE5D73A296BBDFE00BCDB26 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5D739296BBDFE00BCDB26 /* CurrencyFormatter.swift */; };
+		3BE5D73C296BE06E00BCDB26 /* Notification+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5D73B296BE06E00BCDB26 /* Notification+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		3BDAA08D296536CD001840BF /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		3BE5D737296BBDB700BCDB26 /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		3BE5D739296BBDFE00BCDB26 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		3BE5D73B296BE06E00BCDB26 /* Notification+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				3B34823F296572C800CAAE01 /* UIViewController+Utils.swift */,
 				3BE5D737296BBDB700BCDB26 /* Decimal+Utils.swift */,
 				3BE5D739296BBDFE00BCDB26 /* CurrencyFormatter.swift */,
+				3BE5D73B296BE06E00BCDB26 /* Notification+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				3B348240296572C800CAAE01 /* UIViewController+Utils.swift in Sources */,
 				3BE5D73A296BBDFE00BCDB26 /* CurrencyFormatter.swift in Sources */,
 				3B4D7298296298240025902E /* LoginView.swift in Sources */,
+				3BE5D73C296BE06E00BCDB26 /* Notification+Utils.swift in Sources */,
 				3B34823E29656C2E00CAAE01 /* LocalState.swift in Sources */,
 				3B4D7286296294EA0025902E /* LoginViewController.swift in Sources */,
 				3BDAA08E296536CD001840BF /* OnboardingViewController.swift in Sources */,
