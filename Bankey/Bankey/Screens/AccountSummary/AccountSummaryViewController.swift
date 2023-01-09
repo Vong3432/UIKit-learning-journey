@@ -15,7 +15,6 @@ class AccountSummaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Summary"
         style()
         layout()
         setupTableHeaderView()
@@ -31,9 +30,9 @@ extension AccountSummaryViewController {
     
     private func layout() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         view.addSubview(tableView)
         
+        // Table View
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: tableView.topAnchor),
             view.bottomAnchor.constraint(equalTo: tableView.bottomAnchor),

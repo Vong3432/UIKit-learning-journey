@@ -26,12 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         onboardingViewController.delegate = self
         
         if hasOnboarded {
-            window?.rootViewController = loginViewController
+            mainViewController.setStatusBar()
+            window?.rootViewController = mainViewController
         } else {
             window?.rootViewController = onboardingViewController
         }
-        
-        window?.rootViewController = AccountSummaryViewController()
         
         return true
     }
