@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if hasOnboarded {
             mainViewController.setStatusBar()
-//            window?.rootViewController = loginViewController
-            window?.rootViewController = mainViewController
+            window?.rootViewController = loginViewController
+//            window?.rootViewController = mainViewController
         } else {
             window?.rootViewController = onboardingViewController
         }

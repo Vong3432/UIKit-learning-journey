@@ -32,11 +32,21 @@ class LoginViewController: UIViewController {
     var password: String? {
         loginView.passwordTextField.text
     }
+    
+    let leadingEdgeOnScreen: CGFloat = 16.0
+    let leadingEdgeOffScreen: CGFloat = -1000
+    var titleLeadingConstraint: NSLayoutConstraint?
+    var subtitleLeadingConstraint: NSLayoutConstraint?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -47,13 +57,30 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController {
+    private func animate() {
+        let titleAnimator = UIViewPropertyAnimator(duration: 1.75, curve: .easeInOut) {
+            self.titleLeadingConstraint?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        let subtitleAnimator = UIViewPropertyAnimator(duration: 1.75, curve: .easeInOut) {
+            self.subtitleLeadingConstraint?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        
+        titleAnimator.startAnimation()
+        subtitleAnimator.startAnimation(afterDelay: 0.1)
+    }
+}
+
+extension LoginViewController {
     private func style() {
-        titleLabel.text = "Banker"
+        titleLabel.text = "Bankey"
         titleLabel.textAlignment = .center
         titleLabel.font = .preferredFont(forTextStyle: .largeTitle)
         
-        subtitleLabel.text = "Subtitle ..."
+        subtitleLabel.text = "Lorem ipsum is placeholder text commonly used in the graphic, print."
         subtitleLabel.textAlignment = .center
+        subtitleLabel.numberOfLines = 0
         subtitleLabel.font = .preferredFont(forTextStyle: .title2)
         
         signInButton.configuration = .filled()
@@ -66,7 +93,6 @@ extension LoginViewController {
         errorMessageLabel.textColor = .systemRed
         errorMessageLabel.textAlignment = .center
         errorMessageLabel.isHidden = true
-        
     }
     
     private func layout() {
@@ -84,15 +110,19 @@ extension LoginViewController {
         
         // Title label
         NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: titleLabel.trailingAnchor, multiplier: 1),
             titleLabel.bottomAnchor.constraint(equalTo: subtitleLabel.topAnchor)
         ])
+        titleLeadingConstraint = titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        titleLeadingConstraint?.isActive = true
         
         // Subtitle label
         NSLayoutConstraint.activate([
-            subtitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: subtitleLabel.trailingAnchor, multiplier: 1),
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 5)
         ])
+        subtitleLeadingConstraint = subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        subtitleLeadingConstraint?.isActive = true
         
         // LoginView
         NSLayoutConstraint.activate([
