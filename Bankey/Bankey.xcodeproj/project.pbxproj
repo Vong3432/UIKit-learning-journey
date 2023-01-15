@@ -17,11 +17,13 @@
 		3B87C55129644120004A6141 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B87C55029644120004A6141 /* OnboardingContainerViewController.swift */; };
 		3B87CBCD2966C47C00456947 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B87CBCC2966C47C00456947 /* AccountSummaryCell.swift */; };
 		3B9F19E529657AB400B12F8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F19E429657AB400B12F8A /* MainViewController.swift */; };
+		3BAC67F4296FFFD4005BD393 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC67F3296FFFD4005BD393 /* ShakeyBellView.swift */; };
 		3BC9F9ED296678F60001D96E /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9EC296678F60001D96E /* AccountSummaryViewController.swift */; };
 		3BC9F9F22966793E0001D96E /* MoreControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F12966793E0001D96E /* MoreControllerView.swift */; };
 		3BC9F9F42966796C0001D96E /* MoveMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F32966796C0001D96E /* MoveMoneyViewController.swift */; };
 		3BC9F9F629667F9B0001D96E /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F529667F9B0001D96E /* AccountSummaryHeaderView.swift */; };
 		3BC9F9F829667FB20001D96E /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F729667FB20001D96E /* AccountSummaryHeaderView.xib */; };
+		3BCCEB4629742FD20063CAF8 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCCEB4529742FD20063CAF8 /* UIView+Utils.swift */; };
 		3BDAA08E296536CD001840BF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDAA08D296536CD001840BF /* OnboardingViewController.swift */; };
 		3BE5D738296BBDB700BCDB26 /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5D737296BBDB700BCDB26 /* Decimal+Utils.swift */; };
 		3BE5D73A296BBDFE00BCDB26 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5D739296BBDFE00BCDB26 /* CurrencyFormatter.swift */; };
@@ -42,11 +44,13 @@
 		3B87C55029644120004A6141 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		3B87CBCC2966C47C00456947 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		3B9F19E429657AB400B12F8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3BAC67F3296FFFD4005BD393 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		3BC9F9EC296678F60001D96E /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		3BC9F9F12966793E0001D96E /* MoreControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreControllerView.swift; sourceTree = "<group>"; };
 		3BC9F9F32966796C0001D96E /* MoveMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMoneyViewController.swift; sourceTree = "<group>"; };
 		3BC9F9F529667F9B0001D96E /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		3BC9F9F729667FB20001D96E /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		3BCCEB4529742FD20063CAF8 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		3BDAA08D296536CD001840BF /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		3BE5D737296BBDB700BCDB26 /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		3BE5D739296BBDFE00BCDB26 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 				3BE5D739296BBDFE00BCDB26 /* CurrencyFormatter.swift */,
 				3BE5D73B296BE06E00BCDB26 /* Notification+Utils.swift */,
 				3BE5D73D296BF35200BCDB26 /* UITextField+Utils.swift */,
+				3BCCEB4529742FD20063CAF8 /* UIView+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 		3B4D7280296294EA0025902E /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				3BAC67F2296FFFC7005BD393 /* Components */,
 				3BC9F9EE2966791A0001D96E /* Screens */,
 				3B34823C29656C2500CAAE01 /* Utils */,
 				3B87C54F2964410C004A6141 /* Onboarding */,
@@ -151,6 +157,14 @@
 				3B87CBCC2966C47C00456947 /* AccountSummaryCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		3BAC67F2296FFFC7005BD393 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3BAC67F3296FFFD4005BD393 /* ShakeyBellView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		3BC9F9EB296678E70001D96E /* AccountSummary */ = {
@@ -264,8 +278,10 @@
 				3BE5D738296BBDB700BCDB26 /* Decimal+Utils.swift in Sources */,
 				3BE5D73E296BF35200BCDB26 /* UITextField+Utils.swift in Sources */,
 				3B87CBCD2966C47C00456947 /* AccountSummaryCell.swift in Sources */,
+				3BAC67F4296FFFD4005BD393 /* ShakeyBellView.swift in Sources */,
 				3B348240296572C800CAAE01 /* UIViewController+Utils.swift in Sources */,
 				3BE5D73A296BBDFE00BCDB26 /* CurrencyFormatter.swift in Sources */,
+				3BCCEB4629742FD20063CAF8 /* UIView+Utils.swift in Sources */,
 				3B4D7298296298240025902E /* LoginView.swift in Sources */,
 				3BE5D73C296BE06E00BCDB26 /* Notification+Utils.swift in Sources */,
 				3B34823E29656C2E00CAAE01 /* LocalState.swift in Sources */,

@@ -82,6 +82,16 @@ extension LoginViewController {
         }
         subtitleAlphaAnimator.startAnimation(afterDelay: 1)
     }
+    
+    private func shakeButton() {
+        let animation = CAKeyframeAnimation(keyPath: "position.x")
+        animation.values = [0, -10, 10, -10, 0]
+        animation.keyTimes = [0, 0.25, 0.5, 0.85, 1]
+        animation.isAdditive = true
+        animation.duration = 0.25
+        
+        signInButton.layer.add(animation, forKey: "shake")
+    }
 }
 
 extension LoginViewController {
@@ -176,6 +186,7 @@ extension LoginViewController {
         
         if username.isEmpty || password.isEmpty {
             configureErrorMessage(message: "Username & password cannot be empty.")
+            shakeButton()
             return
         }
         

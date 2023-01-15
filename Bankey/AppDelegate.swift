@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = onboardingViewController
         }
         
+        window?.rootViewController = mainViewController
+        
         return true
     }
 }
