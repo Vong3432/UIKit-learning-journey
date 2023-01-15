@@ -17,7 +17,7 @@
 		3B87C55129644120004A6141 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B87C55029644120004A6141 /* OnboardingContainerViewController.swift */; };
 		3B87CBCD2966C47C00456947 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B87CBCC2966C47C00456947 /* AccountSummaryCell.swift */; };
 		3B9F19E529657AB400B12F8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F19E429657AB400B12F8A /* MainViewController.swift */; };
-		3BAC67F4296FFFD4005BD393 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC67F3296FFFD4005BD393 /* ShakeyBellView.swift */; };
+		3BAC67F4296FFFD4005BD393 /* ShakyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC67F3296FFFD4005BD393 /* ShakyBellView.swift */; };
 		3BC9F9ED296678F60001D96E /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9EC296678F60001D96E /* AccountSummaryViewController.swift */; };
 		3BC9F9F22966793E0001D96E /* MoreControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F12966793E0001D96E /* MoreControllerView.swift */; };
 		3BC9F9F42966796C0001D96E /* MoveMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9F9F32966796C0001D96E /* MoveMoneyViewController.swift */; };
@@ -44,7 +44,7 @@
 		3B87C55029644120004A6141 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		3B87CBCC2966C47C00456947 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		3B9F19E429657AB400B12F8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		3BAC67F3296FFFD4005BD393 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
+		3BAC67F3296FFFD4005BD393 /* ShakyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakyBellView.swift; sourceTree = "<group>"; };
 		3BC9F9EC296678F60001D96E /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		3BC9F9F12966793E0001D96E /* MoreControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreControllerView.swift; sourceTree = "<group>"; };
 		3BC9F9F32966796C0001D96E /* MoveMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMoneyViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		3BAC67F2296FFFC7005BD393 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3BAC67F3296FFFD4005BD393 /* ShakeyBellView.swift */,
+				3BAC67F3296FFFD4005BD393 /* ShakyBellView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 				3BE5D738296BBDB700BCDB26 /* Decimal+Utils.swift in Sources */,
 				3BE5D73E296BF35200BCDB26 /* UITextField+Utils.swift in Sources */,
 				3B87CBCD2966C47C00456947 /* AccountSummaryCell.swift in Sources */,
-				3BAC67F4296FFFD4005BD393 /* ShakeyBellView.swift in Sources */,
+				3BAC67F4296FFFD4005BD393 /* ShakyBellView.swift in Sources */,
 				3B348240296572C800CAAE01 /* UIViewController+Utils.swift in Sources */,
 				3BE5D73A296BBDFE00BCDB26 /* CurrencyFormatter.swift in Sources */,
 				3BCCEB4629742FD20063CAF8 /* UIView+Utils.swift in Sources */,
